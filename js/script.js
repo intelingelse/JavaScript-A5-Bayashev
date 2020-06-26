@@ -21,13 +21,8 @@ form.hide();
 
     $("#start-button").click(function(){
         //setting form placeholders for current values
-        for(let i = 1; i<8; i++){
-            $("#text"+i).attr("placeholder",
-            localStorage.getItem("text"+i) === "var"+i || localStorage.getItem("text"+i) === "" || localStorage.getItem("text"+i) === "speach" ?
-            "текущее значение: пусто" :
-            "текущее значение: "+localStorage.getItem("text"+i)
-            );
-        }
+        
+        setPlaceholders();
 
         form.show();
 
@@ -49,6 +44,7 @@ form.hide();
             }
 
             refreshForm();
+            setPlaceholders();
 
             //loading JSON
 
@@ -84,6 +80,8 @@ form.hide();
             });
 
 
+
+
             // function that displays modal window with changed text
             function displayModal(finalizedText){
                 const $resultText = $(".modal-text");
@@ -99,6 +97,16 @@ form.hide();
                 console.log("refreshed form");
             }
         });
+
+        function setPlaceholders(){
+            for(let i = 1; i<8; i++){
+                $("#text"+i).attr("placeholder",
+                localStorage.getItem("text"+i) === "var"+i || localStorage.getItem("text"+i) === "" || localStorage.getItem("text"+i) === "speach" ?
+                "текущее значение: пусто" :
+                "текущее значение: "+localStorage.getItem("text"+i)
+                );
+            }
+        }
 
         //clear local storage variables
 
