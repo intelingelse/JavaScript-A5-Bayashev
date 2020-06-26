@@ -82,7 +82,7 @@ const form =`
 
 
 
-
+    
     $("#start-button").click(function(){
 
         console.log("first button: SUCCESS");
@@ -135,6 +135,8 @@ const form =`
                 .replace(/{var3}/g, localStorage.text3).replace(/{var4}/g, localStorage.text4)
                 .replace(/{var5}/g, localStorage.text5).replace(/{var6}/g, localStorage.text6).replace("{speach}", localStorage.text7);
                 displayModal(changedText);
+                $(".loading").hide();
+                $(".modal-text").show();
             });
 
 
