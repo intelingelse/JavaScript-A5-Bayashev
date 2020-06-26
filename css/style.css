@@ -38,6 +38,7 @@ form{
 
 .form {
     text-align: center;
+    /* display: none; */
 }
 
 .result-form{
