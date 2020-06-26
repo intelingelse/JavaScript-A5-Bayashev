@@ -85,23 +85,6 @@ const form =`
 
     $("#start-button").click(function(){
 
-        //checking if localStorage exists
-        // if(window.localStorage.length > 0){
-        //     //do nothing
-        // }
-        // else {
-        //     //Create and declare localStorage keys & values.
-        //     //Web page will remember the last values passed to it even
-        //     //if the user closes tab or browser.
-        //     localStorage.setItem('text1', "var1")
-        //     localStorage.setItem('text2', "var2");
-        //     localStorage.setItem('text3', "var3");
-        //     localStorage.setItem('text4', "var4");
-        //     localStorage.setItem('text5', "var5");
-        //     localStorage.setItem('text6', "var6");
-        //     localStorage.setItem('text7', "speach");
-        // }
-
         console.log("first button: SUCCESS");
 
         const $resultForm = $(".result-form");
