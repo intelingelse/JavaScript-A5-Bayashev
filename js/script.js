@@ -43,7 +43,6 @@ form.hide();
                 }   
             }
 
-            refreshForm();
             setPlaceholders();
 
             //loading JSON
@@ -88,14 +87,6 @@ form.hide();
                 $resultText.html(finalizedText);
             }
             
-
-            //function that refreshed the form
-            // it need to be refreshed for input placeholders if
-            //new values were passed to it
-            function refreshForm(){
-                $(".result-form").load(window.location.href + " .result-form");
-                console.log("refreshed form");
-            }
         });
 
         function setPlaceholders(){
